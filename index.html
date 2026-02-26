@@ -119,6 +119,23 @@ section h2 {
     transform: translateY(-6px);
 }
 
+/* 2 COLUMN LAYOUT */
+.row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.image img {
+    width: 250px;
+    border-radius: 15px;
+}
+
+.text {
+    flex: 1;
+}
+
 ul {
     padding-left: 20px;
 }
@@ -128,6 +145,17 @@ footer {
     padding: 30px;
     background: #1e293b;
     color: #94a3b8;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    section{
+        padding:80px 20px;
+    }
+
+    .image img{
+        width:100%;
+    }
 }
 </style>
 </head>
@@ -151,26 +179,46 @@ footer {
     <a href="#contact" class="btn">Contact Me</a>
 </div>
 
+<!-- ABOUT -->
 <section id="about">
     <h2>About Me</h2>
-    <div class="card">
-        6th semester Electrical Engineering student at Universitas Mercu Buana 
-        with strong interest in power systems, maintenance engineering, and digital analysis. 
-        Experienced in facility operation and building mechanical-electrical maintenance.
+
+    <div class="row">
+        <div class="image">
+            <!-- GANTI dengan nama file foto kamu -->
+            <img src="fotoprofil.png" alt="Profile Photo">
+        </div>
+
+        <div class="text card">
+            6th semester Electrical Engineering student at Universitas Mercu Buana 
+            with strong interest in power systems, maintenance engineering, and digital analysis. 
+            Experienced in facility operation and building mechanical-electrical maintenance.
+        </div>
     </div>
+
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
     <h2>Education</h2>
-    <div class="card">
-        <strong>Universitas Mercu Buana</strong><br>
-        Electrical Engineering | GPA 3.37 | 2023 – Present
-        <ul>
-            <li>Electrical Circuits</li>
-            <li>Electrical Installation</li>
-            <li>Computer Programming</li>
-        </ul>
+
+    <div class="row">
+        <div class="image">
+            <!-- GANTI dengan logo kampus jika ada -->
+            <img src="logo.png" alt="Campus Logo">
+        </div>
+
+        <div class="text card">
+            <strong>Universitas Mercu Buana</strong><br>
+            Electrical Engineering | GPA 3.37 | 2023 – Present
+            <ul>
+                <li>Electrical Circuits</li>
+                <li>Electrical Installation</li>
+                <li>Computer Programming</li>
+            </ul>
+        </div>
     </div>
+
 </section>
 
 <section id="experience">
