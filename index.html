@@ -3,48 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tubagus Muhamad Alpin | Electrical Engineering Student</title>
+<title>Tubagus Muhamad Alpin | Portfolio</title>
+
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #0f172a;
-    color: #f1f5f9;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: white;
 }
 
-header {
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(15,23,42,0.95);
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
+    background: linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
+    padding: 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 36px;
+.hero h1 {
+    font-size: 45px;
+    background: linear-gradient(to right, #38bdf8, #60a5fa);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-header p {
-    font-size: 18px;
+.hero p {
+    margin-top: 15px;
     color: #94a3b8;
+    font-size: 18px;
 }
 
+.btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #60a5fa;
+    transform: scale(1.05);
+}
+
+/* SECTION */
 section {
-    padding: 40px 20px;
-    max-width: 900px;
+    padding: 100px 60px;
+    max-width: 1000px;
     margin: auto;
 }
 
-h2 {
+section h2 {
+    margin-bottom: 30px;
+    color: #38bdf8;
     border-bottom: 2px solid #334155;
     padding-bottom: 10px;
-    margin-bottom: 20px;
 }
 
 .card {
-    background-color: #1e293b;
-    padding: 20px;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
 }
 
 ul {
@@ -53,125 +125,102 @@ ul {
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #1e293b;
+    padding: 30px;
+    background: #1e293b;
     color: #94a3b8;
 }
 </style>
 </head>
+
 <body>
 
-<header>
+<nav>
+    <h2>Alpin</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
     <h1>Tubagus Muhamad Alpin</h1>
     <p>Electrical Engineering Student | Building & Electrical Technician</p>
-</header>
+    <a href="#contact" class="btn">Contact Me</a>
+</div>
 
-<section>
+<section id="about">
     <h2>About Me</h2>
     <div class="card">
-        <p>
-            I am a 6th semester Electrical Engineering student at Universitas Mercu Buana 
-            with strong interest in power systems, technical analysis, and digital technology 
-            implementation to improve efficiency and productivity.
-        </p>
-        <p>
-            I am accustomed to systematic and solution-oriented thinking while continuously 
-            developing both technical skills and soft skills such as communication, collaboration, 
-            leadership, and project management.
-        </p>
+        6th semester Electrical Engineering student at Universitas Mercu Buana 
+        with strong interest in power systems, maintenance engineering, and digital analysis. 
+        Experienced in facility operation and building mechanical-electrical maintenance.
     </div>
 </section>
 
-<section>
+<section id="education">
     <h2>Education</h2>
     <div class="card">
-        <h3>Universitas Mercu Buana – Electrical Engineering</h3>
-        <p>GPA: 3.37 | 2023 – Present</p>
+        <strong>Universitas Mercu Buana</strong><br>
+        Electrical Engineering | GPA 3.37 | 2023 – Present
         <ul>
-            <li>Computer Programming</li>
-            <li>Electrical Installation Techniques</li>
             <li>Electrical Circuits</li>
-            <li>Laboratory Practice</li>
+            <li>Electrical Installation</li>
+            <li>Computer Programming</li>
         </ul>
     </div>
 </section>
 
-<section>
+<section id="experience">
     <h2>Work Experience</h2>
 
     <div class="card">
-        <h3>Operator Facility – PT Honda Prospect Motor</h3>
-        <p>2022 – 2024</p>
+        <strong>Operator Facility – PT Honda Prospect Motor</strong><br>
+        2022 – 2024
         <ul>
-            <li>Monitoring and maintenance of electrical systems</li>
-            <li>Identifying and troubleshooting technical issues</li>
-            <li>Coordinating with cross-functional technical teams</li>
-            <li>Ensuring compliance with SOP and safety standards</li>
+            <li>Electrical system monitoring</li>
+            <li>Troubleshooting technical issues</li>
+            <li>Ensuring safety & SOP compliance</li>
         </ul>
     </div>
 
     <div class="card">
-        <h3>Building & ME Technician – LRT Jabodebek</h3>
-        <p>2024 – Present</p>
+        <strong>Building & ME Technician – LRT Jabodebek</strong><br>
+        2024 – Present
         <ul>
-            <li>Routine inspection of building mechanical, electrical & plumbing systems</li>
-            <li>Minor troubleshooting and repair works</li>
-            <li>Supporting maintenance planning based on field observations</li>
-            <li>Preventive maintenance of building facilities</li>
+            <li>Inspection of MEP systems</li>
+            <li>Preventive maintenance</li>
+            <li>Minor repair & analysis</li>
         </ul>
     </div>
 
 </section>
 
-<section>
-    <h2>Hard Skills</h2>
-    <div class="card">
-        <ul>
-            <li>Electrical Diagram Reading</li>
-            <li>Basic Electrical Measurement</li>
-            <li>Installation & Maintenance of Electrical Systems</li>
-            <li>Preventive & Corrective Maintenance</li>
-            <li>Google Workspace (Docs, Sheets, Drive, Form)</li>
-            <li>Microsoft Office (Word, Excel, PowerPoint)</li>
-        </ul>
-    </div>
-</section>
-
-<section>
-    <h2>Soft Skills</h2>
-    <div class="card">
-        <ul>
-            <li>Teamwork</li>
-            <li>Problem Solving</li>
-            <li>Analytical Thinking</li>
-            <li>Time Management</li>
-            <li>Leadership</li>
-            <li>Project Management</li>
-        </ul>
-    </div>
-</section>
-
-<section>
+<section id="project">
     <h2>Project</h2>
     <div class="card">
-        <h3>Retail Performance & Customer Insight Dashboard</h3>
-        <p><strong>Mini Project – Excel Bootcamp</strong></p>
-        <p>
-            Developed an interactive retail performance dashboard using Microsoft Excel 
-            to analyze 2,000 transactions with total revenue exceeding Rp128 million.
-        </p>
+        <strong>Retail Performance Dashboard (Excel)</strong>
         <ul>
-            <li>Used Pivot Tables, Pivot Charts, KPI Cards, and Interactive Slicers</li>
-            <li>Analyzed sales by city, platform, customer gender, and product category</li>
-            <li>Identified top-performing platforms and FMCG product drivers</li>
-            <li>Supported data-driven decision making</li>
+            <li>Analyzed 2,000+ transactions</li>
+            <li>Revenue Rp128M+</li>
+            <li>Pivot Table, KPI Card & Interactive Slicer</li>
         </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        Instagram: @tbgs.alpiin <br>
+        E-mail: tubagusalpin8@gmail.com <br>
+        LinkedIn: Tubagus Muhamad Alpin
     </div>
 </section>
 
 <footer>
-    <p>Instagram: @tbgs.alpiin | @alpinn08</p>
-    <p>© 2026 Tubagus Muhamad Alpin</p>
+    © 2026 Tubagus Muhamad Alpin
 </footer>
 
 </body>
